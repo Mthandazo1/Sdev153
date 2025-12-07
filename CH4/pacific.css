@@ -17,7 +17,7 @@ header {
     color: #FFFFFF;
     font-family: Georgia, sans-serif;
 
-    background: url(sunset.jpg) no-repeat right bottom; 
+    background-image: url(sunset.jpg) no-repeat right bottom; 
     height: 72px;
 }
 
