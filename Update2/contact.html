@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Indy Food Truck Rally:Contact</title>
+    <title>Indy Food Truck Rally - Contact Us</title>
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link href="foodtruck.css" rel="stylesheet">
@@ -18,6 +18,7 @@
         <li><a href="trucks.html">The Trucks</a></li>
         <li><a href="schedule.html">Schedule</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
       </ul>
     </nav>
     
@@ -26,18 +27,50 @@
       </div>
       
       <main>
-        <h2>Welcome to the Rally</h2>
-        <p>
-          This is a placeholder we will put alots of good information here. you can bet 
-        </p>
-        call me here at anytime once the page is finished
-        <p>
-      </main>
+        <h2>Contact The Rally</h2>
+        <p>Want to book a truck? Have a question about our schedule? Fill out the form below!</p>
+        
+        <form action="https://httpbin.org/post" method="post" id="contactForm">
+            
+            <label for="myname">Name:</label>
+            <input type="text" name="myname" id="myname" required placeholder="Your full name">
+            
+            <label for="myemail">E-mail:</label>
+            <input type="email" name="myemail" id="myemail" required placeholder="you@example.com">
+            
+            <label for="reason">Reason for Contacting:</label>
+            <select name="reason" id="reason">
+                <option value="catering">Catering Request</option>
+                <option value="vendor">Become a Vendor</option>
+                <option value="feedback">Customer Feedback</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label for="comments">Message:</label>
+            <textarea name="comments" id="comments" rows="4" cols="30"></textarea>
+            
+            <input type="submit" value="Send Now" id="submitBtn">
+        
+        </form>
+        </main>
       
       <footer>
-        Copyright &copy; 2024 Indy Food Truck Rally<br />
+        Copyright © 2024 Indy Food Truck Rally<br />
         <a href="mailto:mthandazo@moyo.com">mthandazo@moyo.com</a>
+        <br>
+        <p>
+            <a href="https://www.google.com/maps">Directions</a> | 
+            <a href="https://www.indy.gov">City of Indianapolis</a> | 
+            <a href="https://www.fda.gov/food">Food Safety</a>
+        </p>
       </footer>
     </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function() {
+            alert("Thank you! Your message is being processed.");
+        });
+    </script>
+
   </body>
 </html>

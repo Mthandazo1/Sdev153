@@ -8,8 +8,8 @@ body {
 }
 
 main {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
     padding-left: 1em;
     padding-right: 1em;
     display: block;
@@ -68,6 +68,11 @@ nav a { text-decoration: none; }
 dt {
     color: #b30000;
     font-weight: bold;
+    margin-top: 1em;
+}
+dd {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
 }
 
 footer {
@@ -76,6 +81,7 @@ footer {
     font-style: italic;
     padding: 1em;
     background-color: #FFFFFF;
+    border-top: 2px solid #b30000;
 }
 
 section {
@@ -91,39 +97,63 @@ section {
     box-shadow: 0 0 10px rgba(0,0,0,0.1); 
 }
 
-
 #homehero {
-    background-color: #555; /* we might need something here */
-    /* background: url(foodtruck.jpg) no-repeat; <--- We will add this later */
+    background-color: #555; 
+    background-image: url(hero.jpg); 
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     height: 300px;
 }
 
-/* Tables */
 table {
     margin: auto;
     border: 1px solid #b30000;
     width: 90%;
     text-align: center;
     border-collapse: collapse;
+    margin-bottom: 1em;
 }
 
 td, th {
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #b30000;
+}
+
+th {
+    background-color: #b30000;
+    color: white;
 }
 
 tr:nth-of-type(even) {
     background-color: #ffcccc; 
 }
 
-input, textarea { margin-bottom: .5em; }
+input, textarea, select { 
+    margin-bottom: 1em; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 form {
     display: flex;
     flex-direction: column;
-    padding-left: 1em;
-    width: 80%;
+    padding-left: 0;
+    width: 100%;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.truck-listing {
+    margin-bottom: 2em;
+}
+
+/* MEDIA QUERIES */
 
 /* Medium Display (Tablets) */
 @media (min-width: 600px) {
@@ -148,11 +178,18 @@ form {
         display: grid;
         grid-template-columns: 10em 1fr;
         grid-gap: 1em;
-        width: 60%;
+        width: 80%;
     }
     input[type="submit"] {
         grid-column: 2 / 3;
         width: 10em;
+        background-color: #b30000;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #333;
     }
 }
 
