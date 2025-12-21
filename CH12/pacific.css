@@ -122,6 +122,24 @@ section {
     height: 300px;
     
 }
+#shophero {
+    background: url(psunset.jpg) no-repeat;
+    background-size: 200% 100%;
+    height: 300px;
+    
+}
+.shop {
+    margin: 1em;
+    background-color: #f4f4f4;
+}
+.shop img {
+    float: right;
+    padding: 1em;
+}
+
+.shop form {
+    clear: right;
+}
 table { margin: auto;
         border: 1px solid #3399cc;
         width: 90%;
@@ -194,6 +212,10 @@ h1 {
     background-size: 100% 100%;
  }
  #trailhero { 
+    background-size: 100% 100%;
+ }
+ 
+ #shophero { 
     background-size: 100% 100%;
  }
  form {  display: grid;
