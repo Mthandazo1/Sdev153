@@ -160,6 +160,11 @@ tr:nth-of-type(even) {
     height: 300px;
 }
 
+video {
+    float: right;
+    margin: 2em;
+}
+
 /* Medium Display */
 @media (min-width: 600px) {
 h1 {
